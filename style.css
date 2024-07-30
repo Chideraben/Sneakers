@@ -361,7 +361,7 @@ to{
     font-size: 20px;
     background-color: var(--Pale-orange);
 }
-@media screen and (max-width:700px) {
+@media screen and (max-width:980px) {
     .input{
         display: block;
     }
@@ -394,7 +394,7 @@ to{
         margin-bottom: 30px;
     }
 }
-@media screen and (max-width:399px){
+@media screen and (max-width:899px){
     .page-body{
         width: 100%;
        display: flex;
