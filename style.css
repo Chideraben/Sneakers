@@ -1,0 +1,411 @@
+
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+#container{
+    width: 100%;
+    height: 100%;
+}
+:root{
+    --Orange: hsl(26, 100%, 55%);
+    --Pale-orange: hsl(25, 100%, 94%);
+    --Very-dark-blue: hsl(220, 13%, 13%);
+    --Dark-grayish-blue: hsl(219, 9%, 45%);
+    --Grayish-blue: hsl(220, 14%, 75%);
+    --Light-grayish-blue: hsl(223, 64%, 98%);
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 75%);
+    
+    
+}
+/*Style for nav*/
+.nav{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0px 4px 4px var(--Black);
+    position: fixed;
+    background-color: var(--White);
+}
+.sec-1{
+    width: 600px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.sec-2{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    height: 100px;
+    gap: 20px;
+}
+li, a{
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    width: 90px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Kumbh Sans, sans-serif ;
+}
+
+.default:hover{
+    border-bottom: 2px solid var(--Orange);
+    width: 100px;
+    
+}
+.img{
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--Black);
+    border-radius: 100%;
+    
+}
+.cart{
+    gap: 10px;
+}
+/* here is for the toggle checkbox*/
+.input{
+    display: none;
+    
+}
+
+ 
+#checkbox{
+    display: none;
+}
+
+.toggle{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    top: 1.5rem;
+    position: absolute;
+    z-index: 40;
+}
+.bars{
+    width: 100%;
+    height:100%;
+    background-color: rgb(176, 92, 255);
+    border-radius: 4px;
+}
+
+#bar2{
+    transition-duration: .8s;
+
+}
+
+#bar1, #bar3{
+    width: 70%;
+}
+#checkbox:checked + .toggle .bars{
+    position: absolute;
+    transition-duration: .5s;
+}
+#checkbox:checked + .toggle #bar2{
+    transform: scaleX(0);
+    transition-duration: .5s;
+    
+}
+#checkbox:checked + .toggle #bar1{
+    width: 100%;
+    height: 7px;
+    transform: rotate(45deg);
+    transition-duration: .5s;
+    
+}
+#checkbox:checked + .toggle #bar3{
+    width: 100%;
+    height: 7px;
+    transform: rotate(-45deg);
+    transition-duration: .5s;
+    
+}
+
+#checkbox:checked + .toggle{
+    transition-duration: .5s;
+    transform: rotate(180deg);
+    
+} 
+
+.page-body{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 100vh;
+    
+}
+/* This is the styling of the body*/
+.first-body{
+    width: 400px;
+    height: 450px;
+    display: grid;
+    gap: 10px;
+    overflow-x: hidden;
+    
+   
+}
+
+
+#product-image{
+    width: 389px;
+    margin-left: 5px;
+    height: 350px;
+    border-radius: 10px;
+   
+}
+
+#img-slide{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+   /* animation: meme 20s infinite        ;*/
+}
+/*@keyframes meme {
+    from{
+        transform: translateX(0%);
+        
+}
+to{
+    transform: translateX(-100%);
+    
+}*/
+#btn-cont{
+    position: absolute;
+    margin-top: 160px;
+    margin-left: -15px;
+    display: flex;
+    gap: 350px;
+}
+#btn-next{
+    width: 40px;
+    height: 40px;
+    font-size: larger;
+    color: var(--Very-dark-blue);
+    border: none;
+    border-radius: 50%;
+   
+}
+#btn-next{
+   right: 50px;
+}
+#product-button{
+    width: 85px;
+    height: 85px;
+    border: none;
+    outline: none;
+    margin-left: 5px;
+    border-radius: 10px;
+    background-color: transparent;
+    
+}
+#product-button:hover{
+    opacity: 75%;
+}
+
+/* Syle for second div body*/
+.second-body{
+    width: 400px;
+    height: 450px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    
+}
+#sec-1{
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.name{
+    font-size: 16px;
+    color: var(--Orange);
+    font-family: Kumbh Sans, sans-serif;
+    font-weight: 600;
+    margin-top: 16px;
+    margin-left: 10px;
+}
+.edition{
+    font-size: 36px;
+    font-family: kumbh sans, sans-serif;
+    color: var(--Very-dark-blue);
+    animation: anime 1s linear;
+    -webkit-animation: anime 1s linear;
+    margin-left: 10px;
+}
+.detail{
+    font-family: kumbh sans, sans-serif;
+    color: var(--Dark-grayish-blue);
+    line-height: 25px;
+    font-size: 14px;
+    animation: anime 2s linear;
+    margin-left: 10px;
+}
+@keyframes anime {
+    from{
+      transform: translateY(30px);
+      
+}
+    to{
+       transform: translateY(0px);
+      
+}
+}
+#sec-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+#percent{
+    color: var(--Orange);
+    background-color: var(--Pale-orange);
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 5px;
+   
+}
+#moni{
+    font-size: 20px;
+    font-weight: 500;
+    font-family: kumbh sans, sans-serif;
+    background-color: transparent;
+    border: none;
+}
+.cart{
+    margin-left: 10px;
+}
+.cart1{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 150px;
+    
+}
+.cart2{
+    display: flex;
+    width: 400px;
+    gap: 60px;
+}
+#price{
+    border: none;
+    background-color: transparent;
+    color: var(--Dark-grayish-blue);
+    font-weight: 800;
+}
+#closing-div1{
+    display: flex;
+    width: 100px;
+    background-color: var(--Pale-orange);
+    border-radius: 4px;
+    
+}
+#closing-div2{
+    width: 200px;
+    height: 30px;
+    background-color: var(--Orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    
+}
+#closing-div2:hover{
+    opacity: 75%;
+    cursor: pointer;
+}
+.add{
+    font-size: 13px;
+    color: var(--White);
+
+}
+#maths{
+    width: 80px;
+    height: 30px;
+    color: var(--Orange);
+    background-color: var(--Pale-orange);
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+#zero{
+    color: black;
+    width: 30px;
+    height: 30px;
+    border: none;
+    outline: none;
+    padding: 0px;
+    font-size: 20px;
+    background-color: var(--Pale-orange);
+}
+@media screen and (max-width:700px) {
+    .input{
+        display: block;
+    }
+    .nav{
+        display: flex;
+        justify-content: space-around;
+    }
+    #logo{
+        margin-left: 30px;
+    }
+    .menu-nav{
+        width: 100%;
+        height: 700px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: var(--White);
+        position: absolute;
+        margin-top: 24rem;
+               
+    }
+    .show{
+        display: none;
+    }
+    li , a {
+        width: 100%;
+        height: 30px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}
+@media screen and (max-width:399px){
+    .page-body{
+        width: 100%;
+       display: flex;
+       justify-content: start;
+       align-items: center;
+       flex-direction: column;
+    }
+    .btn{
+        display: none;
+    }
+    .first-body{
+        margin-top: 50px;
+    }
+}
